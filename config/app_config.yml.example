@@ -1,0 +1,26 @@
+development:
+  translate:
+    key: google-translate-api-key
+  twitter:
+    consumer_key: twitter-consumer-key
+    consumer_secret: twitter-consumer-secret
+    user: twitter-username
+    password: twitter-password
+
+test:
+  translate:
+    key: s3cr37
+  twitter:
+    consumer_key: ss123456
+    consumer_secret: s3cr37
+    user: test
+    password: test
+
+production:
+  translate:
+    key: google-translate-api-key
+  twitter:
+    consumer_key: twitter-consumer-key
+    consumer_secret: twitter-consumer-secret
+    user: twitter-username
+    password: twitter-password

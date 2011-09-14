@@ -1,0 +1,42 @@
+<h1>TweeTranslators</h1>
+
+<p>Follow those simple steps to get your tweets or someone tweets translate to other language:</p>
+
+<h3><strike>1. Login with the twitter account that will publish translated tweets</strike></h3>
+<div class="authentications">
+  <div class="authentication">
+    <%= image_tag "twitter_64.png", :size => "32x32" %>
+      <div class="provider">Twitter</div>
+      <div class="uid"><%= current_user.translated %></div>
+      <%= link_to "X", current_user, :confirm => 'Are you sure you want to deassociate this account?', :method => :delete, :class => "remove" %>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<%= simple_form_for @user do |f| %>
+  <% if @user.completed? %>
+    <h3><strike>2. Give me the screen name of the twitter user that you want to translate</strike></h3>
+  <% else %>
+    <h3>2. Give me the screen name of the twitter user that you want to translate</h3>
+  <% end %>
+  <%= f.input :original, :label => "@", :hint => ' (Ex. yukihiro_matz)' %>
+  <%= f.input :original_uid, :as => :hidden %>
+
+  <% if @user.completed? %>
+    <h3><strike>3. Select the original language and the language to translate</strike></h3>
+  <% else %>
+    <h3>3. Select the original language and the language to translate</h3>
+  <% end %>
+  <%= f.input :lang_from, :collection => EasyTranslate::LANGUAGES.invert, :label => 'Translate from: ' %>
+  <%= f.input :lang_to, :collection => EasyTranslate::LANGUAGES.invert, :label => 'Translate to: ' %>
+  <p><%= f.button :submit, :value => "Finish" %></p>
+<% end %>
+
+<% if @user.completed? %>
+  <div class="success">
+    This account is ready. You can follow <%= link_to_twitter @user.translated %> to read the tweets of
+    <%= link_to_twitter @user.original %> in <%= EasyTranslate::LANGUAGES[@user.lang_to] %>.<br/>You can
+    visit this page anytime to modify the settings or to de-associate a twitter account.
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  original: MyString
+  traslated: MyString
+  lang_from: MyString
+  lang_to: MyString
+
+two:
+  original: MyString
+  traslated: MyString
+  lang_from: MyString
+  lang_to: MyString

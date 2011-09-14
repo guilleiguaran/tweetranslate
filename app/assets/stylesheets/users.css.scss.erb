@@ -1,0 +1,165 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: url('<%= asset_path 'background.gif' %>');
+  background-repeat: repeat;
+  color: #666;
+  text-shadow: 0 0 2px 3px #000;
+  font: {
+    family: 'Istok Web', sans-serif;
+    weight: 400;
+    size: 14px; }; }
+
+h1 {
+  color: #404040; }
+
+h1, h3 {
+  font-weight: 700; }
+
+a {
+  color: #408cd3;
+  text-decoration: none;
+  img {
+    border: none; } }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px; }
+
+#flash_notice,
+#flash_error,
+.success {
+  padding: 5px 8px;
+  margin: 10px 0; }
+
+#flash_notice, .success {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66; }
+
+#flash_error {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666; }
+
+.fieldWithErrors {
+  display: inline; }
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    font: {
+      weight: bold;
+      size: 12px; };
+    background-color: #cc0000;
+    color: white; }
+  p {
+    color: #333333;
+    margin-bottom: 0;
+    padding: 8px; }
+  ul {
+    margin: 2px 24px;
+    li {
+      font-size: 12px;
+      list-style: disc; } } }
+
+.authentications {
+  margin-bottom: 30px; }
+
+.authentication {
+  width: 130px;
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px;
+  .remove {
+    text-decoration: none;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    color: #333;
+    padding: 2px 4px;
+    font-size: 10px; }
+  .remove:hover {
+    color: #CCC;
+    background-color: #777;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px; }
+  img {
+    float: left;
+    margin-right: 10px;}
+  .provider {
+    font-weight: bold;}
+  .uid {
+    color: #666;
+    font-size: 11px;} }
+
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  img {
+    display: block; } }
+
+input[type="text"] {
+  background: #FFF;
+  border: 1px solid #BEBEBE;
+  color: #444;
+  font-size: 13px;
+  padding: 5px;
+  width: 150px;
+  height: 10px; }
+
+input[type="submit"] {
+  border: none;
+  background: #62bce8;
+  color: #fff;
+
+  /* You need to set font, font size and cursor for buttons */
+  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  cursor: pointer;
+
+  padding: 8px 13px;
+  font-weight: bold;
+
+  border-radius: 5px;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+  box-shadow:
+    0 0 0 1px #0086ba inset, /* Outer bevel */
+    0 0 0 2px #6cdcea inset, /* Inner bevel */
+    0 30px 20px -18px rgba(255,255,255,0.65) inset, /* Inner gradient */
+    1px 1px 3px rgba(0,0,0,0.2) /* Drop shadow */
+  ; }
+
+select {
+  background: #FFF;
+  border: 1px solid #BEBEBE;
+  display:block;
+  font-size: 13px;
+  height: 22px;
+  padding: 4px;
+  width: 150px; }

@@ -1,0 +1,28 @@
+<h1>TweeTranslators</h2>
+<p>Tweetranslators allow you to read the tweets of your favorite users without have to worry if they write in japanese, chinesse,
+yidish, urdu or any other language. The translation is powered by <%= link_to "Google Translate", "http://translate.google.com/" %></p>
+
+<p>Follow those simple steps to get your tweets or someone tweets translate to other language:</p>
+
+<h3>1. Login with the twitter account that <u>will publish translated tweets</u></h3>
+<h3>2. Give me the screen name of the twitter user that you want to translate</h3>
+<h3>3. Select the original language and the language to translate</h3>
+
+<br/>
+
+<h3>Start now login with Twitter</h3>
+
+<a href="/auth/twitter" class="auth_provider">
+  <%= image_tag "twitter.png", :alt => "Twitter" %>
+</a>
+
+<div class="clear"></div>
+
+<h3>or check some of the existing twitter accounts associated to this application:</h3>
+
+  <p><%= link_to_twitter("rallyonrails_en") %> (original: <%= link_to_twitter("rallyonrails") %>)</p>
+  <p><%= link_to_twitter("Kardashian_es") %> (original: <%= link_to_twitter("kimkardashian") %>)</p>
+  <p><%= link_to_twitter("matz_es") %> (original: <%= link_to_twitter("yukihiro_matz") %>)</p>
+
+<br/>
+<a href="http://rallyonrails.com/teams/14"><input type="submit" value="Vote us on RallyOnRails" /></a>
