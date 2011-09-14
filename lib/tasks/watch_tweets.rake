@@ -15,8 +15,8 @@ namespace :tweets do
       client.follow(*users) do |status|
         begin
           Rails.logger.info "New status: #{status.text}"
-          user = User.find_by_original_uid(status.user.id_str)
-          if user
+          users = User.find_all_by_original_uid(status.user.id_str)
+          users.each do |user|
             user.tweet(status.text)
           end
         rescue ; end
